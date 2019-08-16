@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <title>Test Netatmo API Credentials</title>
+</head>
+
+<body>
+
+    <h2>Test your Netatmo credentials</h2>
+    Step 1: create an app here: https://dev.netatmo.com/myaccount/createanapp <br>
+    Step 2: Aquire Access Token <br>
+    Step 3: Use Access Token <br>
+    <br>
+    <i>Change the settings below to match your credentials.</i>
+    <br>
+
+    <h3>Step 2</h3>
+    <!-- FORM STEP 2 -->
+    <table>
+        <form method="POST" action="https://api.netatmo.com/oauth2/token" enctype="application/x-www-form-urlencoded;charset=UTF-8">
+            <tr>
+                <td>grant_type (don't change): </td>
+                <td><input type="text" name="grant_type" value="password"></td>
+            </tr>
+            <tr>
+                <td>client_id: </td>
+                <td><input type="text" name="client_id" value="CLIENT ID FROM STEP 1"> </td>
+            </tr>
+            <tr>
+                <td>client_secret: </td>
+                <td><input type="text" name="client_secret" value="CLIENT SECRET FROM STEP 1"> </td>
+            </tr>
+            <tr>
+                <td>username: </td>
+                <td><input type="text" name="username" value="YOUR LOGIN (EMAIL)"></td>
+            </tr>
+            <tr>
+                    <td>password: </td>
+                    <td><input type="text" name="password" value="YOUR PASSWORD"></td>
+            </tr>
+            <tr>
+                <td>scope (optional): </td>
+                <td><input type="text" name="scope" value="read_station read_thermostat"> </td>
+            </tr>
+
+            <td>See JSON</td>
+            <td><input type="submit" value="get token"></td>
+        </form>
+    </table>
+
+    <h3>Step 3</h3>
+    <!-- FORM STEP 3 -->
+    <table>
+        <form method="POST" action="https://api.netatmo.com/api/getstationsdata" enctype="application/x-www-form-urlencoded;charset=UTF-8">
+            <tr>
+                <td>access_token: </td>
+                <td><input type="text" name="access_token" value="THE ACCESS TOKEN RECEIVED IN STEP 2"></td>
+            </tr>
+            <!-- Remove the 4 lines below to see all data -->
+            <tr>
+                <td>device_id (optional): </td>
+                <td><input type="text" name="device_id" value="THE MAC ADRESS OF THE DEVICE"></td>  
+            </tr>
+            <!-- Remove the 4 lines above to see all data -->
+            <tr>
+                <td>scope (optional): </td>
+                <td><input type="text" name="scope" value="read_station read_thermostat"> </td>
+            </tr>
+
+            <td>See JSON</td>
+            <td><input type="submit" value="get device details"></td>
+        </form>
+    </table>
+
+</body>
+
+
+</html>
