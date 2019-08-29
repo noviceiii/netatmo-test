@@ -18,4 +18,4 @@ Form 2:
 - hit send
 - if all went well, you see a plain JSON output
 
-Yes. Very basic. But it helps to solve like "error: invalid_client".
+Yes. Very basic. But very handy for debugging like "error: invalid_client".
