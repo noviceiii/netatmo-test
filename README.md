@@ -1,4 +1,4 @@
-# Test Netatmo Creadentials
+# Test Netatmo Credentials
 A very simple way to test the netatmo api.
 You need to have an account and app set up at netatmo (https://dev.netatmo.com).
 
@@ -8,7 +8,7 @@ Form 1:
 - Enter your credentials
 - Hit "send"
 - if all went well, you see a plain JSON output
-- A token is generated. It looks like hAdkneiansne2Gjk|hAdkneiansne2Gjk
+- A token is generated. It looks like "hAdkneiansne2Gjk|hAdkneiansne2Gjk"
 - Copy the whole token
 - hit "back" in browser to see the forms again
 
@@ -18,4 +18,4 @@ Form 2:
 - hit send
 - if all went well, you see a plain JSON output
 
-Yes. Very basic. But very handy for debugging like "error: invalid_client".
+Yes. Very basic. But maybe handy for debugging the API for errors like "error: invalid_client"...
